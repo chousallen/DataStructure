@@ -7,8 +7,8 @@ using namespace std;
 
 Matrix readMat()
 {
-    int lt, rt, lb, rb;
-    scanf("%d,%d,%d,%d", &lt, &rt, &lb, &rb);
+    unsigned long lt, rt, lb, rb;
+    scanf("%lu,%lu,%lu,%lu", &lt, &rt, &lb, &rb);
     char tmp = 0;
     cin >> tmp;
     if (tmp != ']')
@@ -54,7 +54,7 @@ Matrix process()
     return Matrix(1, 0, 0, 1);
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     Matrix result = process();
     result.print();

@@ -8,14 +8,14 @@ class Matrix
 {
     public:
         Matrix(); 
-        Matrix(int lt, int rt, int lb, int rb);
-        const int* operator[](int ind1) const;
+        Matrix(unsigned long lt, unsigned long rt, unsigned long lb, unsigned long rb);
+        const unsigned long* operator[](unsigned long ind1) const;
         Matrix operator*(Matrix mul) const;
         void print() const;
         ~Matrix(); 
 
     private:
-        int mat[MAT_DIM][MAT_DIM];
+        unsigned long mat[MAT_DIM][MAT_DIM];
 
 };
 
@@ -24,7 +24,7 @@ Matrix::Matrix()
     memset(mat, 0, MAT_DIM*MAT_DIM);
 }
 
-Matrix::Matrix(int lt, int rt, int lb, int rb)
+Matrix::Matrix(unsigned long lt, unsigned long rt, unsigned long lb, unsigned long rb)
 {
     mat[0][0] = lt;
     mat[0][1] = rt;
@@ -32,7 +32,7 @@ Matrix::Matrix(int lt, int rt, int lb, int rb)
     mat[1][1] = rb;
 }
 
-const int* Matrix::operator[](int ind1) const
+const unsigned long* Matrix::operator[](unsigned long ind1) const
 {
     if(ind1 >= MAT_DIM)
     {
@@ -50,7 +50,7 @@ Matrix Matrix::operator*(Matrix mul) const
 
 void Matrix::print() const
 {
-    printf("[%d,%d,%d,%d]\n", mat[0][0], mat[0][1], mat[1][0], mat[1][1]);
+    printf("[%lu,%lu,%lu,%lu]\n", mat[0][0], mat[0][1], mat[1][0], mat[1][1]);
 }
 
 Matrix::~Matrix()
