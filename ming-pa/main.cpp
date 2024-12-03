@@ -58,6 +58,21 @@ int main()
 {
     Matrix result = process();
     result.print();
+    /*
+    while(!cin.eof())
+    {
+        Matrix result = process();
+        result.print();
+        char tmp = 0;
+        if(!cin.eof())
+        {
+            cin >> tmp;
+            //if(tmp != '\n')
+            //    printf("in main loop: \\n expected, but %c got\n", tmp);
+        }
+        cout << endl;
+    }
+    */
 
     return EXIT_SUCCESS;
 }
